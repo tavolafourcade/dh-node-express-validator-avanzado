@@ -9,12 +9,18 @@
                 <div class="columns is-centered">
                     <div class="column is-6">
                         <h1>Registro</h1>
+                        <% if (locals.errors){ %>
+                            <% errors.forEach(error => { %>
+                                <p class="feedback is-danger"><%= error.msg %></p>
+                            <%})%>
+                        <%}%>
+                        
                         <form action="/users" method="POST">
 
                             <div class="field">
                                 <label for="first_name">Nombre</label>
                                 <div class="control">
-                                    <input type="text" name="first_name" id="first_name">
+                                    <input type="text" name="first_name" id="first_name" value="<%= locals.old && old.first_name ? old.first_name : ''%>">
                                 </div>
                                 <p class="feedback"></p>
                             </div>
@@ -22,7 +28,7 @@
                             <div class="field">
                                 <label for="last_name">Apellido</label>
                                 <div class="control">
-                                    <input type="text" name="last_name" id="last_name">
+                                    <input type="text" name="last_name" id="last_name" value="<%= locals.old && old.last_name ? old.last_name : ''%>">
                                 </div>
                                 <p class="feedback"></p>
                             </div>
@@ -30,7 +36,7 @@
                             <div class="field">
                                 <label for="email">Email</label>
                                 <div class="control">
-                                    <input type="text" name="email" id="email">
+                                    <input type="text" name="email" id="email" value="<%= locals.old && old.email ? old.email : ''%>">
                                 </div>
                                 <p class="feedback"></p>
                             </div>
@@ -48,8 +54,8 @@
                                 <div class="control">
                                     <select name="category" id="category">
                                         <option value="">Seleccione una opción</option>
-                                        <option value="vendedor">Vendedor</option>
-                                        <option value="comprador">Comprador</option>
+                                        <option value="vendedor" <%= locals.old && old.category == 'vendedor' ? 'selected' : '';%>>Vendedor</option>
+                                        <option value="comprador" <%= locals.old && old.category == 'comprador' ? 'selected' : '';%>>Comprador</option>
                                     </select>
                                 </div>
                                 <p class="feedback"></p>

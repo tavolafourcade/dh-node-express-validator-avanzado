@@ -88,5 +88,37 @@
   "password": "dWoPzjU8",
   "category": "vendedor",
   "image": null
+ },
+ {
+  "first_name": "sss",
+  "last_name": "ggg",
+  "email": "fgdf@gmail.com",
+  "password": "",
+  "category": "",
+  "id": 11
+ },
+ {
+  "first_name": "Octavio",
+  "last_name": "Castello",
+  "email": "octavio1lafourcade@gmail.com",
+  "password": "",
+  "category": "",
+  "id": 12
+ },
+ {
+  "first_name": "a",
+  "last_name": "g",
+  "email": "fgdf@gmail.com",
+  "password": "",
+  "category": "",
+  "id": 13
+ },
+ {
+  "first_name": "Octavio",
+  "last_name": "Lafourcade",
+  "email": "octavio1lafourcade@gmail.com",
+  "password": "dsdfd",
+  "category": "comprador",
+  "id": 14
  }
 ]
